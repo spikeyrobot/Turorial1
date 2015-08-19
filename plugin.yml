@@ -1,0 +1,7 @@
+name: MyFirstPlugin
+main: me.spikeyrobot.MyFirstPlugin
+version: 1.0
+commands:
+  brb:
+    description: Set your status to BRB.
+    usage: /<command>
