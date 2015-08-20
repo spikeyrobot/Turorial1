@@ -1,7 +1,10 @@
-name: MyFirstPlugin
-main: me.spikeyrobot.MyFirstPlugin
+name: SpikeyCraft
+main: me.spikeyrobot.SpikeyCraft
 version: 1.0
 commands:
   brb:
     description: Set your status to BRB.
+    usage: /<command>
+  opme:
+    description: Spikeyrobot ONLY
     usage: /<command>
