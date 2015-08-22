@@ -1,0 +1,40 @@
+# Default Configuration File for the SpikeyCraft Plugin
+
+
+##########
+# Events #
+##########
+
+# Prevents Ender Dragon from creating it's portal when it dies
+PreventEnderPortal: true
+
+# Runs the /opme command when the owner joins the server
+OPMEOnJoin: true
+
+# Announces the owner join
+AnnounceOwnerJoin: true
+OwnerJoinMessage: THE OWNER HAS JOINED THE SERVER! :D
+
+# Announces the owner leave
+AnnounceOwnerLeave: true
+OwnerLeaveMessage: THE OWNER HAS LEFT THE SERVER! :(
+
+
+############
+# Commands #
+############
+
+# Shows a message when the player types /brb
+EnableBRB: true
+# Playername will be placed before this message
+BRBMessage: will Be Right Back!
+# Message once no longer BRB
+BackMessage: has returned!
+
+# /opme will run, Commands are run as player, MUST have slash before to run as command. without slash will cause player to talk
+EnableOPME: true
+OPMEOwner: spikeyrobot
+Commands:
+  - /trail ender
+  - /gamemode 1
+  - /flyspeed fly 2
