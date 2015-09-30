@@ -1,6 +1,9 @@
 name: SpikeyCraft
 main: me.spikeyrobot.SpikeyCraft
-version: 1.0
+version: 1.1
+description: The SpikeyCraft server custom plugin
+authors:
+     - spikeyrobot
 commands:
   brb:
     description: Set your status to BRB.
@@ -8,3 +11,13 @@ commands:
   opme:
     description: Spikeyrobot ONLY
     usage: /<command>
+  nightvision:
+    description: Give player night vision indefinitely
+    usage: /<command>, /nv
+    permissions: spikeycraft.nightvision.command
+    alias: nv,nightvision
+  nv:
+    description: Give player night vision indefinitely
+    usage: /<command>, /nightvision
+    permissions: spikeycraft.nightvision.command
+    alias: nv,nightvision

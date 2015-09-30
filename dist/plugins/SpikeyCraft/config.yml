@@ -1,5 +1,7 @@
 # Default Configuration File for the SpikeyCraft Plugin
 
+# Prefix placed before all chat messages except for /brb (Use § instead of &)
+Prefix: '§a[§2SpikeyCraft§a]§0: '
 
 ##########
 # Events #
@@ -13,11 +15,11 @@ OPMEOnJoin: true
 
 # Announces the owner join
 AnnounceOwnerJoin: true
-OwnerJoinMessage: THE OWNER HAS JOINED THE SERVER! :D
+OwnerJoinMessage: 'THE OWNER HAS JOINED THE SERVER! :D'
 
 # Announces the owner leave
 AnnounceOwnerLeave: true
-OwnerLeaveMessage: THE OWNER HAS LEFT THE SERVER! :(
+OwnerLeaveMessage: 'THE OWNER HAS LEFT THE SERVER! :('
 
 
 ############
@@ -27,14 +29,21 @@ OwnerLeaveMessage: THE OWNER HAS LEFT THE SERVER! :(
 # Shows a message when the player types /brb
 EnableBRB: true
 # Playername will be placed before this message
-BRBMessage: will Be Right Back!
+BRBMessage: 'will Be Right Back!'
 # Message once no longer BRB
-BackMessage: has returned!
+BackMessage: 'has returned!'
+
+# Enable the Night Vision command (/nightvision)
+EnableNV: true
+# Message telling player they have night vision
+NVMessage: 'You have night vision!'
+# Message telling player they no longer have night vision
+NoNVMessage: 'You no longer have night vision.'
 
 # /opme will run, Commands are run as player, MUST have slash before to run as command. without slash will cause player to talk
 EnableOPME: true
 OPMEOwner: spikeyrobot
 Commands:
-  - /trail ender
-  - /gamemode 1
-  - /flyspeed fly 2
+  - '/trail ender'
+  - '/gamemode 1'
+  - '/flyspeed fly 2'

@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "uuid": "2ce9dee6-8da9-49d2-b51f-d668931e61a7",
+    "name": "spikeyrobot",
+    "level": 4,
+    "bypassesPlayerLimit": false
+  }
+]
