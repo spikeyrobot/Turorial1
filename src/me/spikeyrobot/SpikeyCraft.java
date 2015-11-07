@@ -110,9 +110,9 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 		}
 		return;
 	}
-	
+	@EventHandler
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
-
+		
 		Player player = (Player) sender;
 		
 		//toggle brb off
@@ -158,7 +158,13 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 	@EventHandler(priority = EventPriority.HIGHEST)
 	public void onPlayerChat(AsyncPlayerChatEvent event)
 	{
-		if(find("brb", event.getPlayer().getName()) != -1) {
+		Player player = event.getPlayer();
+		String message = event.getMessage();
+		if(find("brb", player.getName()) != -1 && getConfig().getBoolean("EnableBRB") && message.equalsIgnoreCase("brb")) {
+			brb(player);
+		} else if(message.equalsIgnoreCase("brb") && getConfig().getBoolean("EnableBRB")) {
+			brb(player);
+		} else if(find("brb", player.getName()) != -1) {
 			brb(event.getPlayer());
 		}
 		return;
