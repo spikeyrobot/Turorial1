@@ -1,7 +1,7 @@
 # Default Configuration File for the SpikeyCraft Plugin
 
-# Prefix placed before all chat messages except for /brb (Use § instead of &)
-Prefix: '§a[§2SpikeyCraft§a]§0: '
+# Prefix placed before all chat messages except for /brb
+Prefix: '&a[&2SpikeyCraft&a]&0: '
 
 ##########
 # Events #
@@ -20,6 +20,14 @@ OwnerJoinMessage: 'THE OWNER HAS JOINED THE SERVER! :D'
 # Announces the owner leave
 AnnounceOwnerLeave: true
 OwnerLeaveMessage: 'THE OWNER HAS LEFT THE SERVER! :('
+
+# Teleports the player to the x,y,z coordinates when they join the server
+SpawnOnJoin: true
+SpawnWorld: world
+SpawnCoord:
+- 68.5
+- 65.0
+- 248.5
 
 
 ############

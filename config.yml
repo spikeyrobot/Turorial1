@@ -21,6 +21,14 @@ OwnerJoinMessage: 'THE OWNER HAS JOINED THE SERVER! :D'
 AnnounceOwnerLeave: true
 OwnerLeaveMessage: 'THE OWNER HAS LEFT THE SERVER! :('
 
+# Teleports the player to the x,y,z coordinates when they join the server
+SpawnOnJoin: true
+SpawnWorld: 'world'
+SpawnCoord:
+- 68.5
+- 65.0
+- 248.5
+
 
 ############
 # Commands #

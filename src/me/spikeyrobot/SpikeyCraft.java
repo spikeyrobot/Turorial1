@@ -110,7 +110,6 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 		}
 		return;
 	}
-	@EventHandler
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){
 		
 		Player player = (Player) sender;
@@ -235,6 +234,9 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 			
 			if(getConfig().getBoolean("OPMEOnJoin"))
 				new OwnerJoin(OwnerName, this);
+		}
+		if(getConfig().getBoolean("SpawnOnJoin")) {
+			new SpawnOnJoin(event, this);
 		}
 	}
 	@EventHandler
