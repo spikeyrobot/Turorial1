@@ -21,3 +21,6 @@ commands:
     usage: /<command>, /nightvision
     permissions: spikeycraft.nightvision.command
     alias: nv,nightvision
+  all:
+    description: Used to show error message from SpikeyCraftxServer
+    usage: /all /[command]

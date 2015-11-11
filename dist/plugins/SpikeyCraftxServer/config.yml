@@ -1,0 +1,47 @@
+#If this is the host server
+#set this to true.
+host: false
+
+#If this is not the host server, 
+#set the ip of the host
+ip: '162.245.2.48'
+
+#Set the port the servers will
+#Communicate on
+port: 33777
+
+#Set the prefix to be used before
+#messages sent from this server
+
+prefix: []
+
+#Server Name
+
+serverName: 'Development'
+
+
+#Formats Changes these to customize the
+#way messages COMMING FROM your server look
+#Note: this means that the messages on your server
+#won't look like this but the messages on the OTHER
+#servers. this allows you to customize the look
+#of your server.
+formats:
+  Login: '&0[&a{server}&0]&2{username} has joined the {server} Server'
+  Logout: '&0[&a{server}&0]&4{username} has left the {server} Server'
+  Message: '&0[&a{server}&0&0]&f{username}&0:&f {message}'
+  Death: '&0[&a{server}&0]&7{username} died'
+  Connect: '&9Cross server chat &2connected'
+  Disconnect: '&9Cross server chat &4disconnected'
+  
+#If you do not want other servers to be able
+#to set their own formats you can override
+#the formats of the messages being sent here
+override:
+  enabled: false
+  Login: '[{server}]{username} has joined the game'
+  Logout: '[{server}]{username} has left the game'
+  Message: '[{server}]{username}: {message}'
+  Death: '&9[{server}]{username} died'
+  Disconnect: '&9[xServer]{server} has disconnected'
+

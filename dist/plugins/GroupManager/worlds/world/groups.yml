@@ -9,21 +9,22 @@
 # Local group inheritances define your promotion tree when using 'manpromote/mandemote'
 
 groups:
+  Owner:
+    default: false
+    permissions:
+    - spikeycraft.nightvision.command
+    - xserver.command.send
+    inheritance:
+    - default
+    info:
+      build: true
+      prefix: '&4'
+      suffix: ''
   Default:
     default: true
     permissions: []
     inheritance: []
     info:
-      prefix: '&e'
       build: false
-      suffix: ''
-  Owner:
-    default: false
-    permissions:
-    - spikeycraft.nightvision.command
-    inheritance:
-    - Default
-    info:
-      prefix: '&4'
-      build: true
+      prefix: '&e'
       suffix: ''

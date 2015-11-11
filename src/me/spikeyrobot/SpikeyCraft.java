@@ -22,6 +22,7 @@ import org.bukkit.event.entity.EntityCreatePortalEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerLoginEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -40,6 +41,7 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 	private final String permPrefix = "spikeycraft.";
 
 	public ArrayList<String> BRBList = new ArrayList<String>();
+	private boolean catchAll;
 	
 	@Override
 	public void onEnable() {
@@ -48,6 +50,16 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 		
 		OwnerName = getConfig().getString("OPMEOwner");
 		chatPrefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("Prefix"));
+		
+		Plugin xServer = getServer().getPluginManager().getPlugin("SpikeyCraftxServer");
+		if (!(xServer == null))
+		{
+			catchAll = true;
+			getLogger().info("Found SpikeyCraft compatible xServer");
+		} else {
+			catchAll = false;
+			getLogger().severe("FAILED to find SpikeyCraft compatible xServer");
+		}
 		
 		getServer().getPluginManager().registerEvents(this, this);
 	}
@@ -81,7 +93,6 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 			for (BlockState block : event.getBlocks()) {
 				if (block.getType().getId() == 122)
 					blocks.remove(block);
-	
 				if (block.getType().getId() == 7 || block.getType().getId() == 119)
 					blocks.remove(block);
 				else if (block.getType().getId() == 0 || block.getType().getId() == 50)
@@ -139,9 +150,14 @@ public class SpikeyCraft extends JavaPlugin implements Listener{
 				 ) && sender instanceof Player){
 			player.sendMessage(chatPrefix + "" + ChatColor.RED + "You do not have permission to do this command. If you wish to have this command, you may purchase it with /buy");
 			return true;
+		} else if(catchAll && cmd.getName().equalsIgnoreCase("all")) {
+			getLogger().info("Caught /All");
+			player.sendMessage("Unknown command. Type \"/?\" for help.");
+			return true;
 		} else if((
 				   cmd.getName().equalsIgnoreCase("opme")
-				|| cmd.getName().equalsIgnoreCase("brb")
+					|| cmd.getName().equalsIgnoreCase("brb")
+					|| cmd.getName().equalsIgnoreCase("all")
 			) && sender instanceof Player) {
 			
 			player.sendMessage("Unknown command. Type \"/?\" for help.");

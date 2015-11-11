@@ -22,7 +22,7 @@ AnnounceOwnerLeave: true
 OwnerLeaveMessage: 'THE OWNER HAS LEFT THE SERVER! :('
 
 # Teleports the player to the x,y,z coordinates when they join the server
-SpawnOnJoin: true
+SpawnOnJoin: false
 SpawnWorld: 'world'
 SpawnCoord:
 - 68.5
